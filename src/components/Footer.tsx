@@ -1,7 +1,7 @@
 import { CATALOG_SOURCE } from "../data/catalog";
 import { Logo } from "./Logo";
 import { Camera, Chat } from "./Icons";
-import { inquiryWhatsappUrl } from "../cart/message";
+import { InquiryLink } from "./InquiryLink";
 import { ORDERING } from "../config/ordering";
 
 export function Footer() {
@@ -21,9 +21,9 @@ export function Footer() {
               <p className="font-bold">Bocatto Dolci</p>
               <p className="text-peach/80">{CATALOG_SOURCE.city}</p>
               <div className="mt-3 flex flex-col gap-1">
-                <a href={inquiryWhatsappUrl()} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-8 items-center gap-1.5 font-semibold underline">
+                <InquiryLink label={`WhatsApp ${ORDERING.whatsappDisplay}`} className="inline-flex min-h-8 items-center gap-1.5 font-semibold underline">
                   <Chat className="size-4" /> {ORDERING.whatsappDisplay}
-                </a>
+                </InquiryLink>
                 <a href={CATALOG_SOURCE.instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-8 items-center gap-1.5 font-semibold underline">
                   <Camera className="size-4" /> @bocatto.dolci
                 </a>

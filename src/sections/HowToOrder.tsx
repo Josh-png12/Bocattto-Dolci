@@ -1,6 +1,6 @@
 import { CATALOG_SOURCE } from "../data/catalog";
 import { useCart } from "../cart/CartContext";
-import { inquiryWhatsappUrl } from "../cart/message";
+import { InquiryLink } from "../components/InquiryLink";
 import { Seal } from "../components/Seal";
 import { Bag, Chat, Clock } from "../components/Icons";
 import { formatCOP } from "../lib/format";
@@ -45,15 +45,9 @@ export function HowToOrder() {
                 <span>Ver mi pedido</span>
               )}
             </button>
-            <a
-              href={inquiryWhatsappUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-ghost text-peach"
-              aria-label="Consultas por WhatsApp (abre WhatsApp)"
-            >
+            <InquiryLink label="Consultas por WhatsApp" className="btn btn-ghost text-peach">
               <Chat className="size-5" /> Consultas
-            </a>
+            </InquiryLink>
           </div>
         </div>
 

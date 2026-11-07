@@ -1,5 +1,5 @@
 import { useCart } from "../cart/CartContext";
-import { inquiryWhatsappUrl } from "../cart/message";
+import { InquiryLink } from "./InquiryLink";
 import { formatCOP } from "../lib/format";
 import { Bag, Chat } from "./Icons";
 
@@ -19,15 +19,12 @@ export function StickyOrderBar({ show }: { show: boolean }) {
       inert={!visible}
     >
       <div className="flex items-center gap-2 rounded-full bg-cacao p-1.5 text-peach shadow-[0_18px_30px_-14px_rgb(42_23_18/0.8)]">
-        <a
-          href={inquiryWhatsappUrl()}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Consultas por WhatsApp (abre WhatsApp)"
+        <InquiryLink
+          label="Consultas por WhatsApp"
           className="grid size-11 shrink-0 place-items-center rounded-full text-peach/85 transition-colors hover:bg-peach/10"
         >
           <Chat className="size-5" />
-        </a>
+        </InquiryLink>
         {count > 0 ? (
           <>
             <p className="min-w-0 flex-1 text-[0.95rem] leading-tight">

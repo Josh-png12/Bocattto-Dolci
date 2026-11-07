@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useCart } from "../cart/CartContext";
 import { buildOrderMessage, orderWhatsappUrl } from "../cart/message";
-import { ORDERING } from "../config/ordering";
+import { ORDERING, ORDERS_ENABLED } from "../config/ordering";
 import { formatCOP } from "../lib/format";
 import { gsap, prefersReducedMotion } from "../animations/gsap";
 import { Sheet } from "./Sheet";
@@ -67,6 +67,25 @@ export function CartDrawer() {
           <button type="button" onClick={goToMenu} className="sheet-stagger btn btn-primary mt-6">
             Explorar el menú
           </button>
+        </div>
+      ) : sent && !ORDERS_ENABLED ? (
+        <div className="flex min-h-0 flex-1 flex-col items-center overflow-y-auto px-6 pb-10 pt-2 text-center" role="status">
+          <div className="sent-seal w-28 shrink-0">
+            <Seal title="Sello Bocatto" />
+          </div>
+          <p className="display-soft mt-5 text-2xl">Modo demostración.</p>
+          <p className="mt-3 max-w-[36ch] leading-relaxed text-cacao/85">
+            <strong>No se envió ningún mensaje.</strong> Cuando Bocatto apruebe la propuesta, este botón abrirá WhatsApp con este pedido
+            para que Bocatto lo confirme:
+          </p>
+          <pre className="mt-5 w-full whitespace-pre-wrap rounded-2xl bg-kraft/60 p-4 text-left font-sans text-sm leading-relaxed text-cacao">
+            {buildOrderMessage(lines, note)}
+          </pre>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <button type="button" onClick={() => setSent(false)} className="btn btn-primary">
+              Volver a mi pedido
+            </button>
+          </div>
         </div>
       ) : sent ? (
         <div className="flex flex-1 flex-col items-center justify-center px-6 pb-12 pt-4 text-center" role="status">
@@ -194,16 +213,30 @@ export function CartDrawer() {
             <p className="mt-1 text-[0.8125rem] leading-snug text-cacao-soft">
               No incluye domicilio. Bocatto confirma disponibilidad, costo de entrega y forma de pago por WhatsApp.
             </p>
-            <a
-              href={orderWhatsappUrl(lines, note)}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setSent(true)}
-              className="btn btn-primary mt-3 w-full"
-              aria-label="Pedir por WhatsApp (abre WhatsApp con el mensaje del pedido)"
-            >
-              <Chat className="size-5" /> Pedir por WhatsApp
-            </a>
+            {ORDERS_ENABLED ? (
+              <a
+                href={orderWhatsappUrl(lines, note)}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setSent(true)}
+                className="btn btn-primary mt-3 w-full"
+                aria-label="Pedir por WhatsApp (abre WhatsApp con el mensaje del pedido)"
+              >
+                <Chat className="size-5" /> Pedir por WhatsApp
+              </a>
+            ) : (
+              <>
+                <button
+                  type="button"
+                  onClick={() => setSent(true)}
+                  className="btn btn-primary mt-3 w-full"
+                  aria-label="Pedir por WhatsApp (modo demostración: no se envía ningún mensaje)"
+                >
+                  <Chat className="size-5" /> Pedir por WhatsApp
+                </button>
+                <p className="mt-2 text-center text-xs font-semibold text-carmine">Modo demostración: no se enviará ningún mensaje.</p>
+              </>
+            )}
           </div>
         </>
       )}

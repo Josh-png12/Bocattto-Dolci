@@ -29,11 +29,22 @@ npm run build      # typecheck + build de producción en dist/
 npm run preview    # sirve dist/ → http://localhost:4173
 ```
 
-## Despliegue (preparado, no publicado)
+## Modo demostración (activo por defecto)
 
-- `vercel.json` ya está configurado (framework Vite, salida `dist/`, caché larga para `/images`).
-- El sitio envía `noindex, nofollow` (meta y cabecera) para que la demo no se indexe ni se confunda con el sitio oficial. Quítalo solo si Bocatto aprueba una versión oficial.
-- No se ha hecho `git init`, push ni deploy. Para hacerlo cuando lo autorices: `git init && git add . && git commit`, crea el repositorio y luego `vercel` o importa el repositorio desde el panel de Vercel.
+Mientras Bocatto no apruebe la propuesta, **ningún build envía pedidos ni abre WhatsApp**:
+
+- «Pedir por WhatsApp» muestra el mensaje que se enviaría, sin contactar al negocio.
+- Los accesos de consulta muestran un aviso en lugar de abrir WhatsApp.
+- La franja superior indica «Modo demostración: los pedidos no se envían».
+
+Para activar pedidos reales (solo con aprobación de Bocatto): definir `VITE_ORDERS_ENABLED=true` en las variables de entorno del proyecto en Vercel (Production) y volver a desplegar. El número sigue en `src/config/ordering.ts`.
+
+## Despliegue
+
+- Proyecto Vercel `bocatto-experience`, conectado a `Josh-png12/Bocattto-Dolci` (rama `main`): cada push a `main` despliega automáticamente.
+- Framework Vite, `npm run build`, salida `dist/` (también en `vercel.json`, con caché larga para `/images`).
+- Acceso protegido con Vercel Authentication en todos los despliegues (producción incluida). Para compartir la demo se usa un enlace de acceso de Vercel.
+- El sitio envía `noindex, nofollow` (meta y cabecera). Quítalo solo si Bocatto aprueba una versión oficial.
 
 ## Qué incluye
 

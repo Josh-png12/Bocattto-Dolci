@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 import { CartButton } from "./CartButton";
+import { ORDERS_ENABLED } from "../config/ordering";
 
 const NAV = [
   { href: "#sabores", label: "Sabores" },
@@ -30,7 +31,9 @@ export function Header() {
       {/* Aviso permanente: la demo no es el sitio oficial de Bocatto Dolci. */}
       <div className="relative z-50 bg-cacao px-4 py-2 text-center text-[0.8125rem] leading-snug text-peach">
         <strong className="font-semibold">Concepto independiente de DeepSun Studio, pendiente de aprobación de Bocatto Dolci.</strong>{" "}
-        <span className="text-peach/85">Cada pedido lo confirma Bocatto por WhatsApp.</span>
+        <span className="text-peach/85">
+          {ORDERS_ENABLED ? "Cada pedido lo confirma Bocatto por WhatsApp." : "Modo demostración: los pedidos no se envían."}
+        </span>
       </div>
 
       <header

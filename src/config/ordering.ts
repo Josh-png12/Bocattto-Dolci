@@ -7,7 +7,14 @@
  * Número comercial confirmado por el equipo (2026-11-07): +57 300 965 5684.
  * Es el mismo número que Bocatto tiene configurado como canal de pedidos en OlaClick.
  * Formato internacional sin "+", espacios ni guiones (requisito de wa.me).
+ *
+ * MODO DEMOSTRACIÓN. Los pedidos reales por WhatsApp SOLO se activan con la variable
+ * de entorno VITE_ORDERS_ENABLED="true" en el build (cuando Bocatto apruebe la propuesta).
+ * Sin esa variable —incluido el despliegue público de la demo— no se abre WhatsApp ni se
+ * envía nada al negocio: se muestra el mensaje que se enviaría.
  */
+export const ORDERS_ENABLED = import.meta.env.VITE_ORDERS_ENABLED === "true";
+
 export const ORDERING = {
   whatsappNumber: "573009655684",
   whatsappDisplay: "+57 300 965 5684",

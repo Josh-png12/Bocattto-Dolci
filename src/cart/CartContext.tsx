@@ -52,8 +52,10 @@ function load(): State {
 
 interface Toast {
   id: number;
-  name: string;
-  qty: number;
+  title: string;
+  detail: string;
+  /** Muestra el botón "Ver pedido". */
+  action?: "cart";
 }
 
 interface CartApi {
@@ -76,6 +78,7 @@ interface CartApi {
   closeCart: () => void;
   toast: Toast | null;
   dismissToast: () => void;
+  notify: (title: string, detail: string) => void;
 }
 
 const Ctx = createContext<CartApi | null>(null);
@@ -99,7 +102,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   const add = useCallback<CartApi["add"]>((product, options, qty, note) => {
     dispatch({ type: "add", productId: product.id, options, qty, note });
-    setToast({ id: Date.now(), name: product.displayName, qty });
+    setToast({ id: Date.now(), title: "Agregado", detail: `${qty} × ${product.displayName}`, action: "cart" });
   }, []);
 
   const api: CartApi = {
@@ -127,6 +130,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
     closeCart: () => setCartOpen(false),
     toast,
     dismissToast: () => setToast(null),
+    notify: (title, detail) => setToast({ id: Date.now(), title, detail }),
   };
 
   return <Ctx.Provider value={api}>{children}</Ctx.Provider>;
