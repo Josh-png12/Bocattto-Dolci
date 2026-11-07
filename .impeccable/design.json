@@ -1,0 +1,472 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-07T23:02:13.573Z",
+  "title": "Design System: Bocatto Experience",
+  "extensions": {
+    "colorMeta": {
+      "peach": {
+        "role": "neutral",
+        "displayName": "Counter Peach",
+        "canonical": "oklch(95.2% 0.025 61.6)",
+        "tonalRamp": [
+          "#0f0a06",
+          "#2d251e",
+          "#4e433a",
+          "#716358",
+          "#93877d",
+          "#b6aca4",
+          "#d7cfca",
+          "#f2eeea"
+        ]
+      },
+      "peach-deep": {
+        "role": "neutral",
+        "displayName": "Deep Peach",
+        "canonical": "oklch(90.1% 0.045 59.6)",
+        "tonalRamp": [
+          "#120903",
+          "#322317",
+          "#554030",
+          "#7a604c",
+          "#9b8473",
+          "#bdaa9b",
+          "#dccec4",
+          "#f5ede7"
+        ]
+      },
+      "kraft": {
+        "role": "neutral",
+        "displayName": "Kraft",
+        "canonical": "oklch(81.4% 0.060 77.8)",
+        "tonalRamp": [
+          "#120901",
+          "#32240d",
+          "#544124",
+          "#79623e",
+          "#9a8667",
+          "#bcab92",
+          "#dbcfbd",
+          "#f4ede4"
+        ]
+      },
+      "kraft-deep": {
+        "role": "neutral",
+        "displayName": "Kraft Shadow",
+        "canonical": "oklch(69.2% 0.072 71.9)",
+        "tonalRamp": [
+          "#140800",
+          "#352207",
+          "#593f1c",
+          "#7f5f36",
+          "#a08461",
+          "#c1aa8e",
+          "#dfceba",
+          "#f6ede2"
+        ]
+      },
+      "carmine": {
+        "role": "primary",
+        "displayName": "Sticker Carmine",
+        "canonical": "oklch(45.0% 0.170 19.4)",
+        "tonalRamp": [
+          "#240001",
+          "#52000c",
+          "#810e23",
+          "#b22d3d",
+          "#d16166",
+          "#ed9091",
+          "#ffbdbc",
+          "#ffe4e3"
+        ]
+      },
+      "carmine-deep": {
+        "role": "primary",
+        "displayName": "Deep Carmine",
+        "canonical": "oklch(36.5% 0.137 18.8)",
+        "tonalRamp": [
+          "#200002",
+          "#4a0913",
+          "#77222b",
+          "#a53f47",
+          "#c56b6e",
+          "#e19797",
+          "#f8c1c1",
+          "#ffe6e5"
+        ]
+      },
+      "orange": {
+        "role": "secondary",
+        "displayName": "Bag Orange",
+        "canonical": "oklch(67.9% 0.172 37.1)",
+        "tonalRamp": [
+          "#240000",
+          "#520000",
+          "#811500",
+          "#b23300",
+          "#d16546",
+          "#ec947a",
+          "#ffbfac",
+          "#ffe5da"
+        ]
+      },
+      "orange-ink": {
+        "role": "secondary",
+        "displayName": "Orange Ink",
+        "canonical": "oklch(52.2% 0.159 36.8)",
+        "tonalRamp": [
+          "#230000",
+          "#4f0300",
+          "#7e1d00",
+          "#ad3a15",
+          "#cc694c",
+          "#e8967e",
+          "#fdc1af",
+          "#ffe6dc"
+        ]
+      },
+      "cacao": {
+        "role": "neutral",
+        "displayName": "Cacao",
+        "canonical": "oklch(22.9% 0.033 35.5)",
+        "tonalRamp": [
+          "#110907",
+          "#30231f",
+          "#53403b",
+          "#77605a",
+          "#99847e",
+          "#bba9a5",
+          "#dbceca",
+          "#f4edeb"
+        ]
+      },
+      "cacao-soft": {
+        "role": "neutral",
+        "displayName": "Soft Cacao",
+        "canonical": "oklch(38.3% 0.050 41.3)",
+        "tonalRamp": [
+          "#140804",
+          "#352119",
+          "#593d33",
+          "#7f5d50",
+          "#a08176",
+          "#c1a89e",
+          "#dfccc5",
+          "#f6ece8"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Card Cream",
+        "canonical": "oklch(97.9% 0.018 78.2)",
+        "tonalRamp": [
+          "#0d0b07",
+          "#2a2620",
+          "#4a443c",
+          "#6c655b",
+          "#8e887f",
+          "#b2ada6",
+          "#d4d0cb",
+          "#f0eeeb"
+        ]
+      },
+      "passion": {
+        "role": "tertiary",
+        "displayName": "Maracuyá Yolk",
+        "canonical": "oklch(80.6% 0.147 79.0)",
+        "tonalRamp": [
+          "#1a0500",
+          "#401c00",
+          "#683900",
+          "#915800",
+          "#b17f1b",
+          "#cfa764",
+          "#eacc9e",
+          "#fcecd3"
+        ]
+      },
+      "nutella-brown": {
+        "role": "tertiary",
+        "displayName": "Hazelnut Brown",
+        "canonical": "oklch(40.4% 0.078 45.8)",
+        "tonalRamp": [
+          "#180601",
+          "#3c1d0e",
+          "#633925",
+          "#8b583f",
+          "#ab7d68",
+          "#cba493",
+          "#e6cabd",
+          "#fbebe4"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero stack and footer sign-off only; Fraunces 860 SOFT 100 / WONK 1."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "One per section, short declarative sentence with a full stop; smaller steps for anatomy layer names, quiz result and receipt numerals."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Product, question and occasion names; Fraunces 600 SOFT 100 / WONK 0."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text in DM Sans; leads at 1.125 to 1.25rem, about 34ch."
+      },
+      "label": {
+        "displayName": "Printed Label",
+        "purpose": "Uppercase tracked field labels printed on tickets, the receipt and the seal ring only."
+      },
+      "price": {
+        "displayName": "Price",
+        "purpose": "All COP figures, tabular numerals, struck previous price at 70%."
+      }
+    },
+    "shadows": [
+      {
+        "name": "button-lift",
+        "value": "0 10px 22px -12px rgb(118 12 32 / 0.75)",
+        "purpose": "Carmine buttons and active chips; hover 0 16px 28px -14px rgb(118 12 32 / 0.85)."
+      },
+      {
+        "name": "object-on-counter",
+        "value": "0 40px 60px -30px rgb(42 23 18 / 0.55)",
+        "purpose": "Photo frames, receipt, striped card (up to 0 40px 80px -40px rgb(0 0 0 / 0.8) on dark drenches)."
+      },
+      {
+        "name": "small-object",
+        "value": "0 12px 20px -16px rgb(42 23 18 / 0.6)",
+        "purpose": "Result rows, duo card; header when scrolled uses 0 8px 24px -18px rgb(42 23 18 / 0.6)."
+      },
+      {
+        "name": "sticky-bar",
+        "value": "0 18px 30px -14px rgb(42 23 18 / 0.8)",
+        "purpose": "Mobile sticky order bar."
+      },
+      {
+        "name": "sticker-drop",
+        "value": "drop-shadow(0 18px 22px rgb(42 23 18 / 0.35))",
+        "purpose": "The seal (filter, not box-shadow)."
+      },
+      {
+        "name": "grain",
+        "value": "fractal-noise SVG at 0.16 opacity, mix-blend-mode multiply",
+        "purpose": "Paper surface over drenched sections and kraft plates."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Default reveals (GSAP expo.out 0.9s), link underline, arrow nudge, ground colour transitions, sticky bar."
+      },
+      {
+        "name": "ease-squish",
+        "value": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+        "purpose": "Button press release (0.45s), chip state, hover lifts, anatomy layers dropping in."
+      },
+      {
+        "name": "press",
+        "value": "scale(0.94) over 0.12s",
+        "purpose": "Button :active."
+      },
+      {
+        "name": "spiral-draw",
+        "value": "stroke-dashoffset 1 to 0, power2.inOut / cubic-bezier(0.65, 0, 0.35, 1)",
+        "purpose": "Seal signature: 1.6s hero, 1.1s per flavor change, 1s quiz stamp, 0.55s anatomy lid."
+      },
+      {
+        "name": "circular-wipe",
+        "value": "clip-path circle(0%) to circle(75%), expo.inOut 0.85s",
+        "purpose": "Flavor photo change; image settles from scale 1.18 / -4deg."
+      },
+      {
+        "name": "ingredient-pop",
+        "value": "back.out(2.2) 0.9s, stagger 0.07",
+        "purpose": "SVG ingredients pop in with random rotation; idle float 10px over 6s; seal ring spin 38s."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "GSAP only under no-preference; static complete states, no clip-path, float/spin off, button transitions 0.01ms, smooth scroll off."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "xs",
+        "value": "25rem"
+      },
+      {
+        "name": "sm",
+        "value": "40rem"
+      },
+      {
+        "name": "md",
+        "value": "48rem"
+      },
+      {
+        "name": "lg",
+        "value": "64rem"
+      },
+      {
+        "name": "xl",
+        "value": "80rem"
+      }
+    ],
+    "browserSurface": {
+      "colorScheme": "light",
+      "themeColor": "#9e122c",
+      "selection": "carmine background, peach text",
+      "scrollbar": "carmine pill thumb (3px peach-deep border) on peach-deep track, 12px",
+      "focus": "3px outline, 3px offset, var(--focus) defaulting to carmine; drenched sections set --focus to their ink"
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Every order action: carmine pill with an up-right arrow that opens OlaClick.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Pedir este cheesecake <svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></a>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:3.25rem;padding:.85rem 1.5rem;border-radius:999px;border:0;font:700 1rem/1.1 \"DM Sans Variable\",\"DM Sans\",system-ui,sans-serif;letter-spacing:.005em;text-decoration:none;cursor:pointer;transition:transform .45s cubic-bezier(.34,1.56,.64,1),background-color .25s ease,color .25s ease,box-shadow .35s cubic-bezier(.16,1,.3,1);background:var(--color-carmine);color:var(--color-cream);box-shadow:0 10px 22px -12px rgb(118 12 32/.75)} .ds-btn-primary:hover{background:var(--color-carmine-deep);box-shadow:0 16px 28px -14px rgb(118 12 32/.85)} .ds-btn-primary svg{transition:transform .45s cubic-bezier(.16,1,.3,1)} .ds-btn-primary:hover svg{transform:translateX(4px) rotate(-8deg)} .ds-btn-primary:active{transform:scale(.94);transition-duration:.12s} .ds-btn-primary:focus-visible{outline:3px solid var(--color-carmine);outline-offset:3px}"
+    },
+    {
+      "name": "Cream Button",
+      "kind": "button",
+      "refersTo": "button-cream",
+      "description": "Primary action on carmine drenches.",
+      "html": "<div class=\"ds-carmine-ground\"><a class=\"ds-btn-cream\" href=\"#\">Pedir el XL <svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></a></div>",
+      "css": ".ds-carmine-ground{background:var(--color-carmine);padding:24px;border-radius:16px} .ds-btn-cream{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:3.25rem;padding:.85rem 1.5rem;border-radius:999px;border:0;font:700 1rem/1.1 \"DM Sans Variable\",\"DM Sans\",system-ui,sans-serif;letter-spacing:.005em;text-decoration:none;cursor:pointer;transition:transform .45s cubic-bezier(.34,1.56,.64,1),background-color .25s ease,color .25s ease,box-shadow .35s cubic-bezier(.16,1,.3,1);background:var(--color-cream);color:var(--color-carmine);box-shadow:0 10px 22px -14px rgb(0 0 0/.5)} .ds-btn-cream:hover{background:#fff} .ds-btn-cream svg{transition:transform .45s cubic-bezier(.16,1,.3,1)} .ds-btn-cream:hover svg{transform:translateX(4px) rotate(-8deg)} .ds-btn-cream:active{transform:scale(.94);transition-duration:.12s} .ds-btn-cream:focus-visible{outline:3px solid var(--color-peach);outline-offset:3px}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action on cacao or in the quiz; 2px inset ring in currentColor.",
+      "html": "<div class=\"ds-cacao-ground\"><a class=\"ds-btn-ghost\" href=\"#\">Ver el menú completo</a></div>",
+      "css": ".ds-cacao-ground{background:var(--color-cacao);color:var(--color-peach);padding:24px;border-radius:16px} .ds-btn-ghost{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:3.25rem;padding:.85rem 1.5rem;border-radius:999px;border:0;font:700 1rem/1.1 \"DM Sans Variable\",\"DM Sans\",system-ui,sans-serif;letter-spacing:.005em;text-decoration:none;cursor:pointer;transition:transform .45s cubic-bezier(.34,1.56,.64,1),background-color .25s ease,color .25s ease,box-shadow .35s cubic-bezier(.16,1,.3,1);background:transparent;color:currentColor;box-shadow:inset 0 0 0 2px currentColor} .ds-btn-ghost:hover{background:color-mix(in oklab,currentColor 10%,transparent)} .ds-btn-ghost:active{transform:scale(.94);transition-duration:.12s} .ds-btn-ghost:focus-visible{outline:3px solid var(--color-peach);outline-offset:3px}"
+    },
+    {
+      "name": "Filter Chips",
+      "kind": "chip",
+      "refersTo": "chip-filter",
+      "description": "Menu category filters with count bubbles; active is carmine.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\">Todos <span>10</span></button><button class=\"ds-chip ds-chip-on\" aria-pressed=\"true\">Dúos + Bono de Regalo <span>3</span></button><button class=\"ds-chip\">Postres XL <span>1</span></button></div>",
+      "css": ".ds-chips{display:flex;flex-wrap:wrap;gap:8px} .ds-chip{display:inline-flex;align-items:center;gap:.5rem;min-height:2.75rem;padding:.5rem 1rem;border:0;border-radius:999px;background:var(--color-peach-deep);color:var(--color-cacao);font:600 1rem \"DM Sans Variable\",\"DM Sans\",system-ui,sans-serif;cursor:pointer;transition:all .5s cubic-bezier(.34,1.56,.64,1)} .ds-chip span{border-radius:999px;padding:0 .5rem;font-size:.75rem;background:rgb(42 23 18/.1);font-variant-numeric:tabular-nums} .ds-chip:hover{background:var(--color-kraft)} .ds-chip:active{transform:scale(.95)} .ds-chip:focus-visible{outline:3px solid var(--color-carmine);outline-offset:3px} .ds-chip-on,.ds-chip-on:hover{background:var(--color-carmine);color:var(--color-peach);box-shadow:0 10px 18px -12px rgb(118 12 32/.9)} .ds-chip-on span{background:rgb(252 236 223/.2)}"
+    },
+    {
+      "name": "Kraft Ticket",
+      "kind": "custom",
+      "refersTo": "ticket",
+      "description": "Notched kraft label carrying a printed field label and a tabular price, pinned at a tilt.",
+      "html": "<div class=\"ds-ticket\"><p class=\"ds-ticket-label\">Frutos Rojos</p><p class=\"ds-ticket-price\">$ 14.500</p></div>",
+      "css": ".ds-ticket{--notch:9px;display:inline-block;transform:rotate(6deg);padding:.75rem 1.25rem;background:var(--color-kraft);color:var(--color-cacao);font-family:\"DM Sans Variable\",\"DM Sans\",system-ui,sans-serif;-webkit-mask:radial-gradient(var(--notch) at 0 50%,#0000 98%,#000) 0 0/51% 100% no-repeat,radial-gradient(var(--notch) at 100% 50%,#0000 98%,#000) 100% 0/51% 100% no-repeat;mask:radial-gradient(var(--notch) at 0 50%,#0000 98%,#000) 0 0/51% 100% no-repeat,radial-gradient(var(--notch) at 100% 50%,#0000 98%,#000) 100% 0/51% 100% no-repeat} .ds-ticket p{margin:0} .ds-ticket-label{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--color-cacao-soft)} .ds-ticket-price{font-size:1.5rem;font-weight:700;font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Striped Card",
+      "kind": "card",
+      "refersTo": "striped-card",
+      "description": "The brand's personalised card: cream inside a carmine/orange diagonal-stripe border; holds the quiz result.",
+      "html": "<article class=\"ds-striped\"><h3>Cheesecake de Maracuyá</h3><p>Toque cítrico y la clásica mermelada de la casa.</p></article>",
+      "css": ".ds-striped{max-width:22rem;padding:2rem;border-radius:1.75rem;border:14px solid transparent;background:linear-gradient(var(--color-cream),var(--color-cream)) padding-box,repeating-linear-gradient(-45deg,var(--color-carmine) 0 14px,var(--color-orange) 14px 28px) border-box;box-shadow:0 40px 60px -36px rgb(42 23 18/.7);color:var(--color-cacao);font-family:\"DM Sans Variable\",\"DM Sans\",system-ui,sans-serif} .ds-striped h3{margin:0 0 .5rem;font-family:\"Fraunces Variable\",Fraunces,Georgia,serif;font-weight:860;font-variation-settings:\"SOFT\" 100,\"WONK\" 1,\"opsz\" 144;letter-spacing:-.035em;line-height:.95;font-size:2.25rem;color:var(--color-carmine)} .ds-striped p{margin:0;line-height:1.6}"
+    },
+    {
+      "name": "Receipt",
+      "kind": "custom",
+      "refersTo": "receipt",
+      "description": "Toothed kraft slip with printed labels, carmine Fraunces numerals and dotted leaders.",
+      "html": "<div class=\"ds-receipt\"><p class=\"ds-receipt-head\"><span>Tu pedido</span><span>Bocatto Dolci</span></p><ol><li><b>1</b><span>Elige tu antojo</span><i></i><em>Aquí</em></li><li><b>2</b><span>Pide en OlaClick</span><i></i><em>WhatsApp</em></li></ol></div>",
+      "css": ".ds-receipt{max-width:26rem;transform:rotate(-1.2deg);padding:2rem 2rem 3rem;background:var(--color-kraft);color:var(--color-cacao);border-radius:6px 6px 0 0;font-family:\"DM Sans Variable\",\"DM Sans\",system-ui,sans-serif;-webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/22px 100%;mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/22px 100%} .ds-receipt-head{display:flex;justify-content:space-between;margin:0;padding-bottom:1rem;border-bottom:2px dashed rgb(42 23 18/.3);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--color-cacao-soft)} .ds-receipt ol{list-style:none;margin:0;padding:0} .ds-receipt li{display:flex;align-items:baseline;gap:.75rem;padding:1.1rem 0;border-bottom:2px dashed rgb(42 23 18/.2)} .ds-receipt b{font-family:\"Fraunces Variable\",Fraunces,Georgia,serif;font-weight:860;font-variation-settings:\"SOFT\" 100,\"WONK\" 1;font-size:2.25rem;line-height:.9;color:var(--color-carmine)} .ds-receipt span{font-weight:700} .ds-receipt i{flex:1;min-width:1.5rem;border-bottom:2px dotted color-mix(in oklab,currentColor 35%,transparent);transform:translateY(-.35em)} .ds-receipt em{font-style:normal;color:var(--color-cacao-soft)}"
+    },
+    {
+      "name": "Menu Line",
+      "kind": "custom",
+      "refersTo": "thumb-round",
+      "description": "Round kraft-rimmed thumbnail, Fraunces title with dot leaders to a tabular price, discount badge.",
+      "html": "<div class=\"ds-menu\"><div class=\"ds-thumb\"></div><div class=\"ds-menu-body\"><p class=\"ds-menu-row\"><span class=\"ds-menu-title\">Cheesecake de Milo + Oreo</span><i></i><span class=\"ds-menu-price\">$ 25.300</span></p><p class=\"ds-menu-meta\"><s>Antes $ 28.200</s><span class=\"ds-badge\">−10%</span></p></div></div>",
+      "css": ".ds-menu{display:flex;gap:1.25rem;align-items:flex-start;max-width:34rem;font-family:\"DM Sans Variable\",\"DM Sans\",system-ui,sans-serif;color:var(--color-cacao)} .ds-thumb{flex:none;width:7rem;height:7rem;border-radius:999px;background:var(--color-kraft-deep);box-shadow:0 0 0 6px var(--color-kraft)} .ds-menu-body{flex:1} .ds-menu-body p{margin:0} .ds-menu-row{display:flex;align-items:baseline;gap:.5rem} .ds-menu-title{font-family:\"Fraunces Variable\",Fraunces,Georgia,serif;font-weight:600;font-variation-settings:\"SOFT\" 100,\"WONK\" 0,\"opsz\" 72;letter-spacing:-.02em;font-size:1.5rem;line-height:1.2} .ds-menu-row i{flex:1;min-width:1.5rem;border-bottom:2px dotted rgb(42 23 18/.35);transform:translateY(-.35em)} .ds-menu-price{font-weight:700;font-size:1.125rem;font-variant-numeric:tabular-nums} .ds-menu-meta{display:flex;gap:.5rem;align-items:baseline;margin-top:.5rem!important;font-size:.9rem} .ds-menu-meta s{opacity:.7} .ds-badge{border-radius:999px;background:var(--color-orange);color:var(--color-cacao);padding:.125rem .5rem;font-size:.75rem;font-weight:700}"
+    },
+    {
+      "name": "Seal",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Signature round carmine sticker with ring text and a self-drawing cream spiral (pathLength 1; animate dash offset 1 to 0). Spiral path here is an approximation of the generated 3.2-turn spiral in Seal.tsx.",
+      "html": "<svg class=\"ds-seal\" viewBox=\"0 0 200 200\" role=\"img\" aria-label=\"Sello Bocatto\"><circle cx=\"100\" cy=\"100\" r=\"98\" fill=\"#9e122c\"/><circle cx=\"100\" cy=\"100\" r=\"68\" fill=\"none\" stroke=\"#fcecdf\" stroke-opacity=\".35\" stroke-width=\"1.2\"/><path id=\"ds-ring\" d=\"M100 100 m-82 0 a82 82 0 1 1 164 0 a82 82 0 1 1 -164 0\" fill=\"none\"/><text fill=\"#fcecdf\" style=\"font:700 13.2px 'DM Sans',system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase\"><textPath href=\"#ds-ring\" textLength=\"510\" lengthAdjust=\"spacing\">¡Bocados que enamoran! · La dolce vita en cada cucharada · </textPath></text><path class=\"ds-swirl\" pathLength=\"1\" d=\"M100 48 C129 48 150 71 148 100 C146 128 122 147 96 144 C72 141 57 120 60 98 C63 77 82 64 101 66 C120 68 132 85 129 103 C126 119 111 129 97 126 C84 123 77 110 80 99 C83 89 93 84 102 86 C110 88 114 97 111 104 C108 109 101 110 98 106\" fill=\"none\" stroke=\"#fcecdf\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+      "css": ".ds-seal{width:180px;height:180px;filter:drop-shadow(0 18px 22px rgb(42 23 18/.35))} .ds-swirl{stroke-dasharray:1;stroke-dashoffset:1;animation:ds-serve 1.6s cubic-bezier(.65,0,.35,1) .2s forwards} @keyframes ds-serve{to{stroke-dashoffset:0}} @media (prefers-reduced-motion:reduce){.ds-swirl{animation:none;stroke-dashoffset:0}}"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "",
+      "description": "Unofficial-concept strip over a sticky peach header with pill section links and a compact Pedir button.",
+      "html": "<div class=\"ds-nav-wrap\"><div class=\"ds-strip\"><strong>Concepto independiente de DeepSun Studio.</strong> No es el sitio oficial de Bocatto Dolci.</div><header class=\"ds-header\"><span class=\"ds-brand\">Bocatto<br>Experience</span><nav><a href=\"#\">Sabores</a><a href=\"#\">Anatomía</a><a href=\"#\">Menú</a></nav><a class=\"ds-pedir\" href=\"#\">Pedir <svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></a></header></div>",
+      "css": ".ds-nav-wrap{font-family:\"DM Sans Variable\",\"DM Sans\",system-ui,sans-serif} .ds-strip{background:var(--color-cacao);color:var(--color-peach);text-align:center;font-size:.8125rem;padding:.5rem 1rem} .ds-header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.625rem 1.5rem;background:var(--color-peach);box-shadow:0 8px 24px -18px rgb(42 23 18/.6)} .ds-brand{font-size:.875rem;font-weight:600;line-height:1.2;color:var(--color-cacao-soft)} .ds-header nav{display:flex;gap:4px} .ds-header nav a{padding:.5rem 1rem;border-radius:999px;font-weight:600;color:var(--color-cacao);text-decoration:none;transition:background-color .2s,color .2s} .ds-header nav a:hover{background:rgb(158 18 44/.1);color:var(--color-carmine)} .ds-header nav a:focus-visible,.ds-pedir:focus-visible{outline:3px solid var(--color-carmine);outline-offset:3px} .ds-pedir{display:inline-flex;align-items:center;gap:.5rem;min-height:2.75rem;padding:.5rem 1.25rem;border-radius:999px;background:var(--color-carmine);color:var(--color-cream);font-weight:700;font-size:.9375rem;text-decoration:none;box-shadow:0 10px 22px -12px rgb(118 12 32/.75)} .ds-pedir:hover{background:var(--color-carmine-deep)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Cup From Above",
+    "overview": "The system is Bocatto Dolci's own packaging, laid flat on a peach counter. Every dessert is shown as it is in life: a circle of cream inside a kraft rim, closed with the round carmine sticker. Kraft paper, die-cut tickets, a toothed receipt and the striped border of the brand's personalised card are the furniture; carmine is the ink and the seal. Nothing is borrowed from a generic restaurant template: no split-hero-plus-three-cards, no grid of identical product tiles.\n\nDensity is generous and warm. Headlines are huge, heavy and soft-cornered (Fraunces at weight 860 with SOFT 100 and WONK on) so they rhyme with the hand-lettered logo, while every functional word (prices, nav, buttons, notes) is set in a plain, friendly DM Sans. Whole sections are drenched in one material (peach, kraft, carmine, cacao, or a flavor's own colour) rather than boxed into cards. A fine paper grain sits over the drenched fields.\n\nMotion is tactile: things are served, stamped and squished. The signature is \"la espiral\", a single-stroke cream swirl inside the seal that pipes itself in. Under reduced motion everything is present and still.",
+    "keyCharacteristics": [
+      "Peach ground, kraft fields, carmine drenches; cacao for type and chocolate chapters.",
+      "Fraunces heavy SOFT/WONK headlines against DM Sans UI.",
+      "Packaging objects as components: round seal, notched kraft ticket, toothed receipt, striped card, round kraft-rimmed thumbnails.",
+      "Soft, long, tinted drop shadows; no hard offsets, no glass.",
+      "Squish on touch, expo on reveal, a self-drawing spiral as signature.",
+      "The order is always one tap away (carmine pill button, mobile sticky bar)."
+    ],
+    "rules": [
+      {
+        "name": "The Drench Rule",
+        "body": "A section changes material, not decoration: it takes one full-bleed ground (peach, peach-deep, kraft, carmine, cacao, or a flavor colour) with grain, and its ink flips to match. Never a white card floating on a coloured section.",
+        "section": "colors"
+      },
+      {
+        "name": "The Flavor Wardrobe Rule",
+        "body": "In the flavor explorer each cheesecake owns a ground, ink, accent and seal cream (Frutos Rojos carmine/#fff1e6, Maracuyá passion/cacao, Oreo cacao/peach, Nutella brown/peach, Milo kraft/cacao). Section background and colour transition together over 0.7s expo-out, and the focus ring follows the ink via `--focus`.",
+        "section": "colors"
+      },
+      {
+        "name": "The Orange Is a Deal Rule",
+        "body": "Orange marks discounts and the striped border. It does not become a second button colour or a heading colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Fraunces speaks (headlines, names, the slogan); DM Sans informs (prices, nav, buttons, notes). Never set a price or a button in Fraunces, never set a headline in DM Sans.",
+        "section": "typography"
+      },
+      {
+        "name": "The Printed Label Rule",
+        "body": "Uppercase tracked labels exist only as fields printed on a packaging object (ticket, receipt, seal ring). They never float above a section headline.",
+        "section": "typography"
+      },
+      {
+        "name": "The Counter Light Rule",
+        "body": "Shadows always fall straight down, long and soft, with a negative spread and a cacao or carmine tint. No hard offset shadows, no grey ambient glows, no glassmorphism.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do drench whole sections in one material (peach, peach-deep, kraft, carmine, cacao or a flavor ground) with grain, and flip the ink and `--focus` to match.",
+      "Do show product photos as circles or arches ringed in kraft, the cup seen from above.",
+      "Do express prices, conditions and steps as packaging objects: tickets, the receipt, dotted leaders.",
+      "Do keep every order action a carmine pill with an up-right arrow that opens the exact OlaClick product.",
+      "Do set headlines in Fraunces 860 with SOFT 100 / WONK 1 and functional text in DM Sans.",
+      "Do use the seal's self-drawing spiral to confirm moments (hero arrival, flavor change, quiz result), and give every animation a still, complete reduced-motion state.",
+      "Do keep the unofficial-concept strip visible above the header."
+    ],
+    "donts": [
+      "Don't use orange as body text on peach; use orange-ink, or keep orange to badges and stripes.",
+      "Don't put uppercase tracked kickers or eyebrows above headlines; printed labels belong on tickets, the receipt and the seal ring only.",
+      "Don't use hard offset shadows, grey ambient glows or glass blur; shadows fall long, soft and tinted.",
+      "Don't set prices, buttons or nav in Fraunces, or headlines in DM Sans.",
+      "Don't redraw the logo or invent a second seal; the round sticker with the spiral is the only emblem.",
+      "Don't fall back to the restaurant template (split hero, three equal cards, uniform product grid).",
+      "Don't use emoji or icon-font glyphs; icons and ingredients are inline SVG."
+    ]
+  }
+}

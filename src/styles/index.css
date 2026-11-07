@@ -1,0 +1,275 @@
+@import "@fontsource-variable/fraunces/full.css";
+@import "@fontsource-variable/dm-sans/index.css";
+@import "tailwindcss";
+
+/* ——— Tokens: marca real de Bocatto Dolci (OlaClick + logo + empaque) ——— */
+@theme {
+  --color-peach: #fcecdf;        /* fondo OlaClick */
+  --color-peach-deep: #f6d8c1;
+  --color-kraft: #d8be97;        /* vasos y bolsas kraft */
+  --color-kraft-deep: #b8956a;
+  --color-carmine: #9e122c;      /* color primario / logo */
+  --color-carmine-deep: #760c20;
+  --color-orange: #ee6a43;       /* acento: footer y descuentos en OlaClick */
+  --color-orange-ink: #b23d18;   /* naranja con contraste AA sobre durazno */
+  --color-cacao: #2a1712;
+  --color-cacao-soft: #5a3a2e;
+  --color-cream: #fff7eb;
+  --color-passion: #f2b33d;
+
+  --font-display: "Fraunces Variable", "Fraunces", Georgia, serif;
+  --font-sans: "DM Sans Variable", "DM Sans", system-ui, sans-serif;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-squish: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --breakpoint-xs: 25rem;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.22 0 0 0 0 0.1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    scrollbar-color: var(--color-carmine) var(--color-peach-deep);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+
+  body {
+    background: var(--color-peach);
+    color: var(--color-cacao);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    font-optical-sizing: auto;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+
+  ::selection { background: var(--color-carmine); color: var(--color-peach); }
+
+  ::-webkit-scrollbar { width: 12px; }
+  ::-webkit-scrollbar-track { background: var(--color-peach-deep); }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-carmine);
+    border-radius: 999px;
+    border: 3px solid var(--color-peach-deep);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--focus, var(--color-carmine));
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  a { text-underline-offset: 0.22em; text-decoration-thickness: 0.08em; }
+
+  img { max-width: 100%; height: auto; }
+
+  h1, h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+}
+
+/* Fraunces pesada y "suave": rima con el rotulado redondo del logo. */
+@utility display {
+  font-family: var(--font-display);
+  font-weight: 860;
+  font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 144;
+  letter-spacing: -0.035em;
+  line-height: 0.9;
+}
+@utility display-soft {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-variation-settings: "SOFT" 100, "WONK" 0, "opsz" 72;
+  letter-spacing: -0.02em;
+}
+
+@layer components {
+
+  .grain { position: relative; isolation: isolate; }
+  .grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--grain);
+    opacity: 0.16;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  /* Ticket kraft con muescas laterales, como una etiqueta de empaque. */
+  .ticket {
+    --notch: 9px;
+    background: var(--color-kraft);
+    -webkit-mask:
+      radial-gradient(var(--notch) at 0 50%, #0000 98%, #000) 0 0 / 51% 100% no-repeat,
+      radial-gradient(var(--notch) at 100% 50%, #0000 98%, #000) 100% 0 / 51% 100% no-repeat;
+    mask:
+      radial-gradient(var(--notch) at 0 50%, #0000 98%, #000) 0 0 / 51% 100% no-repeat,
+      radial-gradient(var(--notch) at 100% 50%, #0000 98%, #000) 100% 0 / 51% 100% no-repeat;
+  }
+
+  /* Borde a rayas de la Tarjeta Personalizada real de Bocatto. */
+  .striped-card {
+    background:
+      linear-gradient(var(--color-cream), var(--color-cream)) padding-box,
+      repeating-linear-gradient(-45deg, var(--color-carmine) 0 14px, var(--color-orange) 14px 28px) border-box;
+    border: 14px solid transparent;
+  }
+
+  .dotted-leader {
+    flex: 1;
+    min-width: 1.5rem;
+    border-bottom: 2px dotted color-mix(in oklab, currentColor 35%, transparent);
+    transform: translateY(-0.35em);
+  }
+
+  /* Botón principal: respuesta táctil con "squish". */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    min-height: 3.25rem;
+    padding: 0.85rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.1;
+    letter-spacing: 0.005em;
+    text-decoration: none;
+    transition:
+      transform 0.45s var(--ease-squish),
+      background-color 0.25s ease,
+      color 0.25s ease,
+      box-shadow 0.35s var(--ease-out-expo);
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+  }
+  .btn:active { transform: scale(0.94); transition-duration: 0.12s; }
+  .btn .btn-arrow { transition: transform 0.45s var(--ease-out-expo); }
+  .btn:hover .btn-arrow { transform: translateX(4px) rotate(-8deg); }
+
+  .btn-primary {
+    background: var(--color-carmine);
+    color: var(--color-cream);
+    box-shadow: 0 10px 22px -12px rgb(118 12 32 / 0.75);
+  }
+  .btn-primary:hover { background: var(--color-carmine-deep); box-shadow: 0 16px 28px -14px rgb(118 12 32 / 0.85); }
+
+  .btn-cream {
+    background: var(--color-cream);
+    color: var(--color-carmine);
+    box-shadow: 0 10px 22px -14px rgb(0 0 0 / 0.5);
+  }
+  .btn-cream:hover { background: #fff; }
+
+  .btn-ghost {
+    color: currentColor;
+    box-shadow: inset 0 0 0 2px currentColor;
+  }
+  .btn-ghost:hover { background: color-mix(in oklab, currentColor 10%, transparent); }
+
+  .link-underline {
+    background: linear-gradient(currentColor, currentColor) 0 100% / 100% 2px no-repeat;
+    transition: background-size 0.45s var(--ease-out-expo);
+    text-decoration: none;
+    padding-bottom: 2px;
+  }
+  .link-underline:hover { background-size: 0% 2px; background-position: 100% 100%; }
+
+  .float-y { animation: float-y 6s ease-in-out infinite; }
+  .spin-slow { animation: spin 38s linear infinite; }
+
+  .img-plate {
+    background-color: var(--color-kraft);
+    background-image: var(--grain);
+  }
+
+  .no-scrollbar { scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+}
+
+@keyframes float-y {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -10px; }
+}
+@keyframes spin { to { rotate: 360deg; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .float-y, .spin-slow { animation: none; }
+  .btn, .btn .btn-arrow { transition-duration: 0.01ms; }
+}
+
+/* Capas del vaso en "Anatomía de un antojo" */
+.layer {
+  opacity: 0;
+  transform: translateY(-28px);
+  transition: opacity 0.6s var(--ease-out-expo), transform 0.9s var(--ease-squish);
+}
+.layer-on { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .layer { transition: none; }
+}
+
+/* Firma: la espiral siempre usa pathLength=1 → dasharray 1 permite "servirla" animando dashoffset. */
+.seal-swirl { stroke-dasharray: 1; }
+.lid .seal-swirl { stroke-dashoffset: 1; transition: stroke-dashoffset 0.55s cubic-bezier(0.65, 0, 0.35, 1); }
+.lid .lid-swirl-on .seal-swirl { stroke-dashoffset: 0; }
+
+/* Recibo kraft: borde inferior dentado */
+.receipt {
+  -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 22px 100%;
+  mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 22px 100%;
+  border-radius: 6px 6px 0 0;
+}
+
+/* Menú: los puntos guía nacen al final de la última línea del título y llegan al precio. */
+@media (min-width: 40rem) {
+  .menu-line h3 { overflow: hidden; }
+  .menu-title::after {
+    content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .";
+    white-space: nowrap;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: color-mix(in oklab, var(--color-cacao) 35%, transparent);
+    margin-right: -100vw;
+  }
+  .menu-price { background: var(--color-peach); }
+}
+
+/* Paneles modales (hoja de producto y pedido) */
+html { scrollbar-gutter: stable; }
+html.sheet-lock { overflow: hidden; }
+.sheet::backdrop { background: rgb(42 23 18 / 0.55); }
+.sheet[open]::backdrop { animation: fade-in 0.4s ease-out; }
+@keyframes fade-in { from { opacity: 0; } }
+
+/* Opciones de modificadores: tarjetas seleccionables */
+.choice:has(input:checked) {
+  background: var(--color-carmine);
+  color: var(--color-cream);
+  box-shadow: 0 10px 18px -12px rgb(118 12 32 / 0.9);
+}
+.choice:has(input:focus-visible) { outline: 3px solid var(--color-carmine); outline-offset: 3px; }
+.choice:has(input:checked) .choice-price { color: var(--color-peach); }
+
+@keyframes bump { 0%, 100% { transform: scale(1); } 40% { transform: scale(1.35); } }
+.bump { animation: bump 0.5s var(--ease-squish); }
+@media (prefers-reduced-motion: reduce) {
+  .bump { animation: none; }
+  .sheet[open]::backdrop { animation: none; }
+}
